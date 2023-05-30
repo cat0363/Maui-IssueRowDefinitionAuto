@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_IssueRowDefinitionAuto.MainPage">
+
+    <Grid RowDefinitions="50,Auto,200" RowSpacing="0">
+        <StackLayout Grid.Row="0" Orientation="Horizontal">
+            <Button x:Name="btnAdd" Text="Add" BackgroundColor="Blue" TextColor="White" Clicked="btnAdd_Clicked" Margin="2" />
+        </StackLayout>
+        <ScrollView Grid.Row="1" x:Name="svTestItems" Orientation="Vertical" VerticalOptions="Start">
+            <StackLayout x:Name="slTestItems" Orientation="Vertical" VerticalOptions="Start">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="*,Auto" HeightRequest="50">
+                            <Label Grid.Column="0" Text="{Binding ItemName}" FontSize="20" VerticalOptions="Center" />
+                            <Button Grid.Column="1" x:Name="btnDelete" Text="Delete" BackgroundColor="Blue" TextColor="White" Clicked="btnDelete_Clicked" Margin="2" />
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+        <Grid Grid.Row="2" BackgroundColor="Red" />
+    </Grid>
+
+</ContentPage>
