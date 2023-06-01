@@ -31,8 +31,8 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
-	  <CodesignKey>Apple Development: Gentaro Kuroki (W96H6SMNR3)</CodesignKey>
-	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
+	  <CodesignKey></CodesignKey>
+	  <CodesignProvision></CodesignProvision>
 	</PropertyGroup>
 
 	<ItemGroup>
